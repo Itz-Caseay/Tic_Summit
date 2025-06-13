@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiC SuMmit - Signup</title>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+        <div class="submit">
+        <form action="" method="post">
+            <span>Sign Up</span><br>
+        {% csrf_token %}
+        <input type="text" name="username" id="" placeholder="Username" required>
+        <input type="email" name="email" id="" placeholder="Email Address" required>
+        <input type="password" name="password" id="" placeholder="Enter Password" required>
+        <input type="password" name="password2" id="" placeholder="Cnfirm Password" required><br>
+        <button type="submit">Sign In</button>
+        
+        </form>
+        <div class="left">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h3>
+                Welcome To <span style="font-size: 45px; color: aquamarine;">T.I.C</span> <span style="font-size: 45px; color: aquamarine;">S</span>u<span style="font-size: 45px; color: aquamarine;">M</span>mit
+            </h3>
+            <p>
+                Already Have an account?
+            </p>
+
+            <center>
+                <button>
+                    sign in
+                </button>
+            </center>
+        </div>
+    </div>
+    </center>
+
+    <style>
+        body{
+            background: #ffffffff;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .submit{
+            width: 80%;
+            height: 510px;
+            background: transparent;
+            border: none;
+            margin-right: 20px;
+            box-shadow: 0 0 10px;
+            display: flex;
+        }
+
+        .submit form{
+            width: 50%;
+            height: auto;
+        }
+        .submit form span{
+            margin-top: 40px;
+            font-size: 30px;
+            padding: 10px;
+            margin-left: 48px;
+            display: flex;
+        }
+        .submit form input{
+            width: 80%;
+            height: 60px;
+            margin: 10px 0;
+            padding: 0 10px;
+            border: none;
+            outline: none;
+            border-radius: 50px;
+            margin-top: 2px;
+        }
+        .submit form button{
+            width: 85%;
+            height: 60px;
+            margin: 10px 0;
+            padding: 0 10px;
+            background: rgb(22, 23, 49);
+            color: #ffffffff;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            border-radius: 50px;
+            display: block;
+            margin-top: 30px;
+        }
+
+        .submit form button:hover{
+            background-color: transparent;
+            color: rgb(22, 23, 49);
+            border: 2px solid rgb(22, 23, 49);
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+        }
+
+        .submit form .forget{
+            display: flex;
+            width: 90%;
+            height: auto;
+            justify-content: space-between;
+        }
+        .submit form .forget span{
+            width: 50%;
+            font-size: 15px;
+            display: flex;
+            padding: 10px 0;
+            margin: 10px;
+            gap: 5px;
+        }
+        .submit form .forget span input{
+            width: 20px;
+            height: 20px;
+            background-color: #ffffffff;
+            margin: 0px;
+            padding: 10px;
+        }
+
+        .submit .left{
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 25px;
+            color: #ffffffff;
+            background: rgb(22, 23, 49);
+        }
+        .submit .left h4{
+            margin-top: 50px;
+            align-self: center;
+            margin: 10px;
+            padding: 10px;
+        }
+        .submit .left p{
+            font-size: 17px;
+        }
+
+        .submit .left button{
+            width: 100px;
+            height: 40px;
+            color: #ffffffff;
+            background: transparent;
+            border: 2px solid #ffffffff;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>

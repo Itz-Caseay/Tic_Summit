@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiC SuMmit - Home</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <span style="font-size: 45px; color: rgb(22, 23, 49);">T.I.C</span>
+
+            <div class="nav-links">
+                <a href="">How We Work</a>
+                <a href="">Projects</a>
+                <a href="">Support</a>
+                <a href="">Blog</a>
+            </div>
+        </div>
+        <div class="auth">
+            {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}">Sign Out</a>
+            {% else %}
+                <a href="{% url 'signup' %}">Sign Up</a>
+                <a href="{% url 'login' %}">Sign In</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="main">
+        <div class="first">
+            <button>Questions? We can help</button>
+        </div>
+        <div class="second">
+            <div class="holder">
+                <div class="underline"></div>
+                <img src="{% static 'images/calculator.png' %}" alt="">
+                <h1>Budget?</h1>
+            </div>
+
+            <div class="holder">
+                <div class="underline"></div>
+                <img src="{% static 'images/credit-card-alt.png' %}" alt="">
+                <h1>Bills?</h1>
+            </div>
+
+            <div class="holder">
+                <div class="underline"></div>
+                <img src="{% static 'images/credit-card-front.png' %}" alt="">
+                <h1>Credit?</h1>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: aliceblue;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .nav .logo{
+        display: flex;
+        font-family: 'poppins';
+        font-weight: bold;
+    }
+    .nav .logo .nav-links{
+        display: flex;
+        gap: 20px;
+        margin-left: 30px;
+        margin-top: 16px;
+    }
+    .nav .logo .nav-links a{
+        text-decoration: none;
+        color: rgba(0, 0, 0);
+    }
+    .nav .auth{
+        display: flex;
+        gap: 20px;
+    }
+    .nav .auth a{
+        text-decoration: none;
+        color: rgba(0, 0, 0);
+        font-weight: bold;
+        padding: 10px 20px;
+        width: 69px;
+        height: 20px;
+        border: none;
+        background: rgb(22, 23, 49);
+        color: #fff;
+        align-items: center;
+        text-align: center;
+    }
+    .nav .auth a:hover{
+        background: transparent;
+        border: 2px solid rgb(22, 23, 49);
+        transition: 0.5s ease-in-out;
+        color: black;
+    }
+    .main{
+        width: 99%;
+        height: 89vh;
+        border: none;
+        align-self: center;
+        margin-left: 8px;
+        display: inline-block;
+    }
+    .main .first{
+        width: 100%;
+        height: 400px;
+        background-image: url("{% static 'images/tic.jpg' %}");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .main .first button{
+        width: 200px;
+        height: 50px;
+        background-color: rgb(22, 23, 49);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        margin: 10px;
+        margin-left: 10px;
+        margin-top: 320px;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+    .main .first button:hover{
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgb(22, 23, 49);
+        transition: 0.5s ease-in-out;
+        font-weight: bold;
+    }
+    .main .second{
+        width: 100%;
+        height: 450px;
+        margin-top: 10px;
+        background: #ffffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    .main .second .holder{
+        width: 25%;
+        height: 350px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .main .second .holder:hover{
+        width: 26%;
+        height: 360px;
+        transition: 0.5s ease-in-out;
+    }
+    .main .second .holder .underline{
+        width: 100%;
+        height: 8px;
+        background: rgb(22, 23, 49);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .main .second .holder img{
+        width: 50%;
+        height: 200px;
+    }
+    .main .second .holder h1{
+        font-family: sans-serif;
+    }
+</style>
+</html>
