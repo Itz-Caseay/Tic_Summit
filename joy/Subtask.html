@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create SubTask</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f0f6ff;
+      color: #333;
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #ffffff;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .main {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .topbar input[type="text"] {
+      padding: 8px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      max-width: 1000px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-row input,
+    .form-row select {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .assignments {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 20px;
+    }
+
+    .assignments div {
+      flex: 1;
+    }
+
+    .assignments select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .assignments label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 5px 0;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .actions button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn-create {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .btn-delete {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .btn-attach {
+      background-color: #c2f0d0;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>AProjectO</h2>
+    <ul>
+      <li>Project</li>
+      <li>Tasks</li>
+      <li>Work Logs</li>
+      <li><strong>Performance</strong></li>
+      <li>Settings</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <input type="text" placeholder="Search for anything..." />
+      <div class="user-profile">
+        <span>Ammis Agrawal</span>
+        <img src="caseay.jpg" alt="user" style="border-radius: 50%;" />
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Create SubTask</h2>
+
+      <div class="form-row">
+        <input type="text" placeholder="SubTask Title" value="Addodile" />
+        <select>
+          <option>Type - I</option>
+        </select>
+        <input type="date" />
+        <input type="date" />
+      </div>
+
+      <textarea placeholder="SubTask Description">CA_Studio is simply a upcomimg tech company...</textarea>
+
+      <div class="assignments">
+        <div>
+          <label>Reporter</label>
+          <select><option>Team Lead</option></select>
+          <label><input type="checkbox" /> Yash - Team lead</label>
+          <label><input type="checkbox" /> Yash - Team lead</label>
+          <label><input type="checkbox" /> Yash - Team lead</label>
+        </div>
+        <div>
+          <label>Assignee</label>
+          <select><option>Team Lead</option></select>
+          <label><input type="checkbox" checked /> Yash - Team lead</label>
+          <label><input type="checkbox" /> Yash - Team lead</label>
+          <label><input type="checkbox" /> Yash - Team lead</label>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn-attach">Add Attachment</button>
+        <div>
+          <button class="btn-create">Create</button>
+          <button class="btn-delete">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

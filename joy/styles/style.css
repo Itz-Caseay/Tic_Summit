@@ -1,0 +1,58 @@
+body{
+    background-image: url('../background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.submit{
+    background: #000;
+    width: 80%;
+    height: 80vh auto;
+    border: none;
+    opacity: 50%;
+    border-radius: 10px;
+    margin-top: 50px;
+    color: #ffffff;
+}
+.submit h3{
+    font-family: 'poppins';
+    color: #D8F402;
+    font-size: 45px;
+}
+.submit form{
+    
+}
+.submit form label{
+    display: block;
+    padding: 5px;
+    padding-right: 20px;
+    margin-right: 45rem;
+    margin: 2px;
+}
+.submit form input{
+    width: 80%;
+    height: 50px;
+    border: 3px solid #BE7100;
+    border-radius: 20px;
+    background: transparent;
+    outline: none;
+    color: #ffffff;
+}
+button{
+    width: 80%;
+    height: 50px;
+    border: 3px solid #BE7100;
+    border-radius: 20px;
+    background: #BE7100;
+    outline: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+    opacity: 100%;
+}
+button:hover{
+    border: 3px solid #BE7100;
+    border-radius: 20px;
+    background: transparent;
+}

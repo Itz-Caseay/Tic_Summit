@@ -1,0 +1,450 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'poppins';
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.nav{
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+.nav .menu{
+    display: flex;
+}
+.nav .menu .links{
+    display: flex;
+    gap: 10px;
+}
+.nav .logo{
+    color: #D8F402;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+hr{
+    width: 0.005rem;
+    background: #BE7100;
+}
+.btn{
+    width: 80px;
+    height: 20px;
+    background: #D8F402;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    text-align: center;
+    margin-right: 5px;
+    font-weight: bolder;
+}
+.btn .balannce{
+    margin-right: 50px;
+    display: flex;
+    padding-left: 20px;
+    text-align: center;
+}
+.btn button{
+    width: 25px;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/*main section */
+.main{
+    width: 100%;
+    height: 570px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+.main .recent{
+    width: 30%;
+    height: 450px;
+    border: 2px solid #D8F402;
+    border-radius: 15px;
+    text-align: center;
+    justify-content: space-between;
+    display: block;
+    overflow: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.main .recent::-webkit-scrollbar{
+    display: none;
+}
+.main .recent p{
+    color: #D8F402;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 8px;
+}
+.main .recent hr{
+    width: 99%;
+    margin-bottom: 10px;
+}
+.main .recent .list{
+    padding: 2px;
+    justify-content: space-between;
+    display: flex;
+    color: #BE7100;
+    line-height: 2px;
+    font-weight: bold;
+    width: 100%;
+}
+.main .recent .list span{
+    margin: 30px;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.main .play{
+    width: 65%;
+    height: 450px;
+    border: none;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+.main .play .rank{
+    width: 80%;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #D8F402;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 85px;
+}
+.main .play .rank p{
+    color: #D8F402;
+}
+.main .play .rank span{
+    color: #BE7100;
+}
+
+.main .play .start{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+.main .play .start button{
+    width: 150px;
+    height: 150px;
+    border: #BE7100 10px solid;
+    border-radius: 50%;
+    font-weight: bolder;
+    font-size: medium;
+    background: #BE711b;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+.main .play .start button:hover{
+    border: #BE711b 10px solid;
+    background: #BE7100;
+    transition: .5s ease-in-out;
+    color: #ffffff;
+}
+.main .play .start .auto-play{
+    width: 155px;
+    height: 80px;
+    background: #BE7100;
+    border: none;
+    border-radius: 10px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+.main .play .start .auto-play .online{
+    width: 10px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background: lime;
+    margin-top: 5px;
+}
+.main .play .start .auto-play .underline{
+    width: 100%;
+    height: 3px;
+    background: lime;
+    margin-top: 5px;
+}
+.main .play .start .auto-play .hold{
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+    padding: 5px;
+}
+.main .play .start .auto-play .hold .on{
+    width: 25px;
+    height: 10px;
+    background: limegreen;
+    border-radius: 15px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.main .play .start .auto-play .hold .on .btt{
+    width: 50%;
+    height: 100%;
+    border: none;
+    border-radius: 50%;
+    background: #BE7100;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        align-items: center;
+        justify-content: center;
+        background-image: url('background.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        position: fixed;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        color: #ffff00;
+      
+    }
+    .nav .links{
+        overflow: hidden;
+        cursor: pointer;
+        position: fixed;
+        top: 0;
+        left: 0;
+        text-align: center;
+        height: 100vh;
+        width: 45%;
+        transform: translateX(-100%);
+        transition: 0.3s ease;
+        display: inline-block;
+        flex-direction: column;
+        padding: 60px 20px;
+        z-index: 999;
+        overflow: hidden;
+        border: none;
+        gap: 10px;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+    .menu .hold{
+      margin-top: 40px;
+      cursor: pointer;
+    }
+    
+    .menu .hold span{
+        width: 25px;
+        height: 3px;
+        background: #ffffff;
+        margin: 3px;
+        margin-left: 325px;
+        display: flex;
+        cursor: pointer;
+    }
+    .links a{
+        text-decoration: none;
+        color: #ffffff;
+        font-family: 'poppins';
+        font-weight: bold;
+        display: block;
+        margin-top: 2rem;
+        display: block;
+        font-size: 1.3rem;
+        transition: 0.2s ease;
+    }
+    .links .active{
+        transform: translateY(0);
+    }
+    hr{
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
+    .btn{
+        width: 80px;
+        height: 20px;
+        background: #D8F402;
+        display: flex;
+        margin-top: 5px;
+        justify-content: space-between;
+        border: none;
+        outline: none;
+        border-radius: 25px;
+        text-align: center;
+        color: #ffffffff;
+        margin-bottom: 20px;
+        top: 20px;
+        font-weight: bolder;
+    }
+    .btn .balannce{
+        margin-right: 500px;
+        margin-top: 10px;
+        display: flex;
+        padding-left: 20px;
+        text-align: center;
+    }
+    .btn button{
+        background-color: #ffffffff; /* Your original green-yellow */
+  border-radius: 10px;
+  padding: 2px 6px;
+    }
+    .nav .logo{
+        margin-top: 5px;
+        position: fixed;
+    }
+    .main{
+        display: inline-block;
+        height: auto;
+    }
+    .main .recent{
+        width: 80%;
+        height: 355px;
+        border: limegreen 2px solid;
+        color: #ffffffff;
+        text-align: center;
+        margin-top: 45px;
+        margin-left: 20px;
+        display: block;
+        overflow: hidden;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .main .recent span{
+      color: #ffffffff;
+    }
+    .main .play{
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+        text-align: center;
+        margin-right: 20px;
+        left: 40px;
+        display: block;
+        color: #ffffffff;
+    }
+    .main .play .rank{
+        width: 80%;
+        height: 40px;
+        background: transparent;
+        border: 2px solid #D8F402;
+        color: #ffffffff;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 17px;
+    }
+    .main .play .start{
+      margin-right: 30px;
+    }
+    .main .play .start button{
+
+    width: 100px;
+
+    height: 100px;
+    border: #BE7100 10px solid;
+    border-radius: 50%;
+    font-weight: bolder;
+    font-size: medium;
+    background: #BE711b;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.main .play .start button:hover{
+    border: #BE711b 10px solid;
+    background: #BE7100;
+    transition: .5s ease-in-out;
+    color: #ffffff;
+}
+.main .play .start .auto-play{
+
+    width: 155px;
+
+    height: 80px;
+    background: #BE7100;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.main .play .start .auto-play .online{
+    width: 10px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background: lime;
+    margin-top: 5px;
+}
+.main .play .start .auto-play .underline{
+    width: 100%;
+    height: 3px;
+    background: lime;
+    margin-top: 5px;
+}
+.main .play .start .auto-play .hold{
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+    padding: 5px;
+}
+.main .play .start .auto-play .hold .on{
+    width: 25px;
+    height: 10px;
+    background: limegreen;
+    border-radius: 15px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.main .play .start .auto-play .hold .on .btt{
+    width: 50%;
+    height: 100%;
+    border: none;
+    border-radius: 50%;
+    background: #BE7100;
+    cursor: pointer;
+}
+}
